@@ -6,6 +6,7 @@ import logo from '@/assets/logo.svg'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { EmptyState } from '@/components/empty-state'
+import { LinkCard } from '@/components/link-card'
 import { useLinks, useCreateLink, useExportLinks } from '@/hooks/use-links'
 import { createLinkSchema, type CreateLinkInput } from '@/lib/schemas'
 
@@ -111,28 +112,11 @@ export function Home() {
             ) : !links?.length ? (
               <EmptyState />
             ) : (
-              <div className="mt-5 space-y-3">
+              <>
                 {links.map((link) => (
-                  <div
-                    key={link.id}
-                    className="p-4 rounded-lg border border-[#CDCFD5] bg-white"
-                  >
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex-1 min-w-0">
-                        <p className="text-sm font-semibold text-[#1F2025] truncate">
-                          {link.shortUrl}
-                        </p>
-                        <p className="text-xs text-[#74798B] truncate mt-1">
-                          {link.originalUrl}
-                        </p>
-                        <p className="text-xs text-[#4D505C] mt-2">
-                          {link.accessCount} acessos
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                  <LinkCard key={link.id} link={link} />
                 ))}
-              </div>
+              </>
             )}
           </div>
         </div>
