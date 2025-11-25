@@ -13,7 +13,10 @@ import { linksRoutes } from './routes/create'
 
 const server = fastify()
 
-server.register(fastifyCors, { origin: '*' })
+server.register(fastifyCors, { 
+  origin: '*',
+  methods: ['GET', 'POST', 'PATCH', 'DELETE', 'PUT', 'OPTIONS']
+})
 
 server.setValidatorCompiler(validatorCompiler)
 server.setSerializerCompiler(serializerCompiler)
