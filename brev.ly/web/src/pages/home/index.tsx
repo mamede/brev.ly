@@ -52,13 +52,13 @@ export function Home() {
   }
 
   return (
-    <div className="min-h-screen w-full bg-[#E4E6EC] py-[88px]">
+    <div className="min-h-screen w-full bg-gray-200 py-[88px]">
       <div className="max-w-[980px] mx-auto px-6">
         <img src={logo} alt="Brev.ly" className="mb-14" />
 
         <div className="flex flex-col lg:flex-row items-start gap-5">
-          <div className="bg-[#F9F9FB] rounded-lg p-8 w-full lg:w-[380px] shrink-0">
-            <h2 className="text-lg font-bold text-[#1F2025] leading-6 mb-6">
+          <div className="bg-gray-100 rounded-lg p-8 w-full lg:w-[380px] shrink-0">
+            <h2 className="text-lg font-bold text-gray-600 leading-6 mb-6">
               Novo link
             </h2>
 
@@ -84,9 +84,9 @@ export function Home() {
             </form>
           </div>
 
-          <div className="bg-[#F9F9FB] rounded-lg p-8 w-full lg:w-[580px]">
+          <div className="bg-gray-100 rounded-lg p-8 w-full lg:w-[580px]">
             <div className="flex items-center justify-between mb-5">
-              <h2 className="text-lg font-bold text-[#1F2025] leading-6">
+              <h2 className="text-lg font-bold text-gray-600 leading-6">
                 Meus links
               </h2>
               <Button
@@ -103,11 +103,11 @@ export function Home() {
               </Button>
             </div>
 
-            <div className="border-t border-[#CDCFD5]" />
+            <div className="border-t border-gray-300" />
 
             {isLoading ? (
               <div className="flex items-center justify-center py-12">
-                <Loader2 className="w-8 h-8 animate-spin text-[#74798B]" />
+                <Loader2 className="w-8 h-8 animate-spin text-gray-400" />
               </div>
             ) : !links?.length ? (
               <EmptyState />

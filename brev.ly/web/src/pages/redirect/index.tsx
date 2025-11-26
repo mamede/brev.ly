@@ -44,9 +44,9 @@ export function Redirect() {
   }, [shortUrl, isError, link, navigate, queryClient])
   return (
     <main
-      className="min-h-screen w-full flex items-center justify-center px-6 py-20 bg-[#E4E6EC]"
+      className="min-h-screen w-full flex items-center justify-center px-6 py-20 bg-gray-200"
     >
-      <div className="w-full max-w-[540px] bg-[#F9F9FB] rounded-lg px-10 py-16 md:px-16 md:py-20 flex flex-col items-center gap-8 text-center">
+      <div className="w-full max-w-[540px] bg-gray-100 rounded-lg px-10 py-16 md:px-16 md:py-20 flex flex-col items-center gap-8 text-center">
         <div className="flex items-center justify-center">
           <img
             src={icon}
@@ -55,16 +55,16 @@ export function Redirect() {
           />
         </div>
 
-        <h1 className="text-lg font-bold text-[#1F2025]">
+        <h1 className="text-lg font-bold text-gray-600">
           Redirecionando...
         </h1>
 
         <div className="flex flex-col gap-2">
-          <p className="text-sm text-[#4D505C]">
+          <p className="text-sm text-gray-500">
             O link será aberto automaticamente em alguns instantes.
           </p>
 
-          <p className="text-sm text-[#4D505C]">
+          <p className="text-sm text-gray-500">
             Não foi redirecionado?{' '}
             <a
               href="/"
