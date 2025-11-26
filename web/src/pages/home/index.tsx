@@ -112,11 +112,11 @@ export function Home() {
             ) : !links?.length ? (
               <EmptyState />
             ) : (
-              <>
+              <div className="max-h-[480px] overflow-y-auto scrollbar-custom">
                 {links.map((link) => (
                   <LinkCard key={link.id} link={link} />
                 ))}
-              </>
+              </div>
             )}
           </div>
         </div>
